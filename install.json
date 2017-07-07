@@ -24,7 +24,7 @@
       "theme": {
         "order": 0,
         "title": "Message",
-        "description": "What kind of message should the user see?",
+        "description": "What message should your visitors see?",
         "type": "string",
         "format": "radios",
         "default": "slow",
@@ -39,44 +39,6 @@
           "stop": "“This site has been blocked by your ISP.”",
           "slow": "“Sorry, we’re stuck in the slow lane.”",
           "without": "“This is the web without net neutrality.”"
-        }
-      },
-
-      "org": {
-        "order": 1,
-        "title": "Newsletter",
-        "description": "Which newsletter can users signed up for?",
-        "type": "string",
-        "format": "radios",
-        "default": "random",
-        "enum": [
-          "random",
-          "fp",
-          "dp",
-          "fftf"
-        ],
-        "enumNames": {
-          "random": "Choose an organization randomly",
-          "fp": "Free Press",
-          "dp": "Demand Progress",
-          "fftf": "Fight for the Future"
-        }
-      },
-
-      "delay": {
-        "order": 2,
-        "title": "Delay",
-        "description": "How long before the message appears?",
-        "type": "string",
-        "format": "radios",
-        "default": "1000",
-        "enum": [
-          "1000",
-          "5000"
-        ],
-        "enumNames": {
-          "1000": "Immediately",
-          "5000": "After a few seconds"
         }
       }
     }
