@@ -1,0 +1,82 @@
+{
+  "resources": {
+    "body": [
+      {
+        "type": "script",
+        "src": "./source/app.js"
+      },
+      {
+        "type": "script",
+        "src": "./node_modules/battleforthenet-widget/widget.js"
+      }
+    ]
+  },
+  "disabled_preview": {
+    "handlers": [
+      {
+        "options": ["*"],
+        "execute": "INSTALL_SCOPE.setOptions(INSTALL_OPTIONS)"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "theme": {
+        "order": 0,
+        "title": "Theme",
+        "description": "What theme should the message use?",
+        "type": "string",
+        "format": "radios",
+        "default": "slow",
+        "enum": [
+          "slow",
+          "money",
+          "stop"
+        ],
+        "enumNames": {
+          "money": "“Please upgrade your plan to proceed.”",
+          "stop": "“This site has been blocked by your ISP.”",
+          "slow": "“Sorry, we’re stuck in the slow lane.”"
+        }
+      },
+
+      "org": {
+        "order": 1,
+        "title": "Newsletter",
+        "description": "Which newsletter can users signed up for?",
+        "type": "string",
+        "format": "radios",
+        "default": "random",
+        "enum": [
+          "random",
+          "fp",
+          "dp",
+          "fftf"
+        ],
+        "enumNames": {
+          "random": "Choose an organization randomly",
+          "fp": "Free Press",
+          "dp": "Demand Progress",
+          "fftf": "Fight for the Future"
+        }
+      },
+
+      "delay": {
+        "order": 2,
+        "title": "Delay",
+        "description": "How long before the message appear?",
+        "type": "string",
+        "format": "radios",
+        "default": "1000",
+        "enum": [
+          "1000",
+          "5000"
+        ],
+        "enumNames": {
+          "1000": "Immediately",
+          "5000": "After a few seconds"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "cloudflare-app-battle-for-the-net",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "install": "napa fightforthefuture/battleforthenet-widget",
+    "lint": "standard --fix ./source/**/*.js || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CloudflareApps/BattleForTheNet.git"
+  },
+  "author": "Cloudflare Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CloudflareApps/BattleForTheNet/issues"
+  },
+  "homepage": "https://github.com/CloudflareApps/BattleForTheNet#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "napa": "^3.0.0",
+    "standard": "^9.0.1"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "INSTALL",
+      "INSTALL_OPTIONS",
+      "INSTALL_SCOPE",
+      "INSTALL_ID"
+    ]
+  }
+}
