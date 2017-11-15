@@ -1,14 +1,15 @@
 (function () {
   'use strict'
 
-  if (!window.addEventListener) return // Check for IE9+
-
-  var options = INSTALL_OPTIONS
-  var isPreview = INSTALL_ID === 'preview'
-
   window._bftn_options = {
-    theme: options.theme,
-    delay: parseInt(options.delay, 10),
-    always_show_widget: isPreview
+    always_show_widget: INSTALL_ID === 'preview',
+    custom_disclaimer_link: {
+      text: 'Install with Cloudflare Apps',
+      href: 'https://www.cloudflare.com/apps/net-neutrality'
+    }
   }
+
+  var vendorScript = document.createElement('script')
+  vendorScript.src = 'https://widget.battleforthenet.com/widget.js'
+  document.head.appendChild(vendorScript)
 }())
